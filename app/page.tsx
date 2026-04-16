@@ -339,7 +339,7 @@ export default function Home() {
         animate={{ y: 0 }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          isScrolled ? "py-4 bg-white/80 backdrop-blur-xl border-b border-slate-200 shadow-sm" : "py-6 bg-transparent"
+          isScrolled ? "py-3 lg:py-4 bg-white/95 backdrop-blur-xl border-b border-slate-200 shadow-sm" : "py-4 lg:py-6 bg-transparent"
         }`}
       >
         <div className="container mx-auto px-6 lg:px-12 flex items-center justify-between">
@@ -373,34 +373,36 @@ export default function Home() {
         </div>
       </motion.nav>
 
-      {/* Mobile Menu Overlay */}
       <AnimatePresence>
         {mobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: "-100%" }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: "-100%" }}
-            transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-            className="fixed inset-0 z-40 bg-white flex flex-col items-center justify-center"
-          >
-            <div className="mb-12">
-              <VardaanLogo />
-            </div>
-            <div className="flex flex-col items-center gap-10">
-              {["Home", "About", "Services", "Portfolio", "Contact"].map((item, i) => (
-                <motion.button
+          <>
+            {/* Backdrop */}
+            <motion.div 
+              initial={{ opacity: 0 }} 
+              animate={{ opacity: 1 }} 
+              exit={{ opacity: 0 }} 
+              onClick={() => setMobileMenuOpen(false)}
+              className="fixed inset-0 z-40 bg-slate-900/20 backdrop-blur-sm lg:hidden"
+            />
+            {/* Sleek Dropdown */}
+            <motion.div
+              initial={{ opacity: 0, y: -10, scale: 0.95 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: -10, scale: 0.95 }}
+              transition={{ duration: 0.2, ease: "easeOut" }}
+              className="fixed top-[72px] right-4 sm:right-6 z-50 w-56 bg-white rounded-2xl shadow-2xl border border-slate-100 p-2 flex flex-col gap-1 lg:hidden origin-top-right"
+            >
+              {["Home", "About", "Services", "Portfolio", "Contact"].map((item) => (
+                <button
                   key={item}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.2 + (i * 0.1) }}
                   onClick={() => scrollTo(item.toLowerCase())}
-                  className="font-serif text-5xl text-slate-800 hover:text-amber-500 transition-colors"
+                  className="w-full text-left font-medium text-base text-slate-700 hover:text-amber-600 hover:bg-slate-50 px-4 py-3 rounded-xl transition-all"
                 >
                   {item}
-                </motion.button>
+                </button>
               ))}
-            </div>
-          </motion.div>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
 
@@ -528,8 +530,8 @@ export default function Home() {
 
         {/* Scroll Indicator */}
         <motion.div 
-          initial={isMobile ? false : { opacity: 0 }}
-          animate={isMobile ? false : { opacity: 1 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ delay: 1.2, duration: 1 }}
           className="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 z-20 hidden sm:flex flex-col items-center gap-2"
         >
@@ -590,8 +592,8 @@ export default function Home() {
             </motion.div>
 
             <motion.div 
-              initial={isMobile ? false : { opacity: 0, scale: 0.95 }}
-              whileInView={isMobile ? undefined : { opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.8, ease: "easeOut" }}
               className="relative aspect-square sm:aspect-[4/5] lg:aspect-square xl:aspect-[4/5] rounded-3xl overflow-hidden group shadow-[0_20px_50px_rgba(0,0,0,0.1)] order-1 lg:order-2 border border-slate-100"
@@ -643,8 +645,8 @@ export default function Home() {
             
             {/* Card 1: Large */}
             <motion.div 
-              initial={isMobile ? false : { opacity: 0, y: 30 }}
-              whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
               className="md:col-span-2 lg:row-span-2 relative group overflow-hidden rounded-[2rem] bg-white border border-slate-200 p-6 sm:p-8 md:p-12 flex flex-col justify-between hover:border-blue-200 transition-all shadow-xl hover:shadow-2xl min-h-[280px] sm:min-h-[400px]"
@@ -670,8 +672,8 @@ export default function Home() {
 
             {/* Card 2 */}
             <motion.div 
-              initial={isMobile ? false : { opacity: 0, y: 30 }}
-              whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
               className="relative group overflow-hidden rounded-[2rem] bg-white border border-slate-200 p-6 sm:p-8 md:p-10 flex flex-col hover:border-amber-200 transition-all shadow-md hover:shadow-xl hover:-translate-y-1 min-h-[220px] sm:min-h-[300px]"
@@ -688,8 +690,8 @@ export default function Home() {
 
             {/* Card 3 */}
             <motion.div 
-              initial={isMobile ? false : { opacity: 0, y: 30 }}
-              whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
               className="relative group overflow-hidden rounded-[2rem] bg-white border border-slate-200 p-6 sm:p-8 md:p-10 flex flex-col hover:border-sky-200 transition-all shadow-md hover:shadow-xl hover:-translate-y-1 min-h-[220px] sm:min-h-[300px]"
@@ -706,8 +708,8 @@ export default function Home() {
 
             {/* Card 4 (Full Width Bottom) */}
             <motion.div 
-              initial={isMobile ? false : { opacity: 0, y: 30 }}
-              whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6 }}
               className="md:col-span-2 lg:col-span-3 relative group overflow-hidden rounded-[2rem] border border-slate-200 flex flex-col lg:flex-row hover:border-blue-300 transition-all bg-white shadow-xl hover:shadow-2xl min-h-[280px] sm:min-h-[350px] cursor-pointer"
@@ -818,8 +820,8 @@ export default function Home() {
           {portfolioProjects.map((project, i) => (
             <motion.div 
               key={`${project._id ?? project.title}-${i}`}
-              initial={isMobile ? false : { opacity: 0, x: 50 }}
-              whileInView={isMobile ? undefined : { opacity: 1, x: 0 }}
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.8, delay: i * 0.15, ease: "easeOut" }}
               onClick={() => setActiveProject(project)}
