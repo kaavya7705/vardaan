@@ -332,7 +332,7 @@ export default function Home() {
   const shouldAnimateOnScroll = !isMobile;
 
   return (
-    <main className="relative min-h-screen bg-slate-50 selection:bg-amber-500/30 overflow-x-hidden text-slate-900">
+    <main className="relative min-h-screen bg-slate-50 selection:bg-amber-500/30 overflow-x-hidden text-slate-900" role="main">
       {/* ═ Navigation ═ */}
       <motion.nav
         initial={{ y: -100 }}
@@ -419,7 +419,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-b from-slate-950/75 via-cyan-950/45 to-slate-900/80 z-10" />
           <Image
             src="/hero-bg.png"
-            alt="Premium Construction"
+            alt="Vardaan Builders & Contractors — Premium construction and architectural excellence"
             fill
             className="object-cover opacity-70 mix-blend-overlay mix-blend-primary"
             priority
@@ -465,7 +465,7 @@ export default function Home() {
           </motion.div>
 
           <motion.h1 
-            className="font-display text-[clamp(2rem,6vw,7rem)] font-extrabold leading-[1.1] md:leading-[1.05] text-white mb-4 drop-shadow-lg"
+            className="font-display text-[clamp(1.75rem,6vw,7rem)] font-extrabold leading-[1.1] md:leading-[1.05] text-white mb-4 drop-shadow-lg"
             initial="hidden"
             animate="show"
             variants={staggerContainer}
@@ -598,7 +598,7 @@ export default function Home() {
             >
               <Image 
                 src="/project2.png" 
-                alt="Architecture details" 
+                alt="Vardaan Builders project — Luxury residential construction with premium finishing" 
                 fill 
                 className="object-cover transition-transform duration-1000 group-hover:scale-105" 
               />
@@ -623,8 +623,9 @@ export default function Home() {
                 <div className="w-16 h-[2px] bg-amber-500"></div>
                 <span className="text-sm font-bold tracking-[0.2em] text-blue-950 uppercase">Our Expertise</span>
               </div>
-              <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-slate-900 leading-[1.1]">
-                Mastery in <br className="hidden sm:block"/>
+              <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl text-slate-900 leading-[1.15]">
+                Mastery in{' '}
+                <br className="hidden sm:block"/>
                 <span className="italic text-slate-400 font-light">every dimension.</span>
               </h2>
             </div>
@@ -646,7 +647,7 @@ export default function Home() {
               whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="md:col-span-2 lg:row-span-2 relative group overflow-hidden rounded-[2rem] bg-white border border-slate-200 p-8 sm:p-12 flex flex-col justify-between hover:border-blue-200 transition-all shadow-xl hover:shadow-2xl min-h-[400px]"
+              className="md:col-span-2 lg:row-span-2 relative group overflow-hidden rounded-[2rem] bg-white border border-slate-200 p-6 sm:p-8 md:p-12 flex flex-col justify-between hover:border-blue-200 transition-all shadow-xl hover:shadow-2xl min-h-[280px] sm:min-h-[400px]"
             >
               <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity transform group-hover:scale-110 duration-700 text-blue-900">
                 <Building2 size={160} strokeWidth={1} />
@@ -673,7 +674,7 @@ export default function Home() {
               whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="relative group overflow-hidden rounded-[2rem] bg-white border border-slate-200 p-8 sm:p-10 flex flex-col hover:border-amber-200 transition-all shadow-md hover:shadow-xl hover:-translate-y-1 min-h-[300px]"
+              className="relative group overflow-hidden rounded-[2rem] bg-white border border-slate-200 p-6 sm:p-8 md:p-10 flex flex-col hover:border-amber-200 transition-all shadow-md hover:shadow-xl hover:-translate-y-1 min-h-[220px] sm:min-h-[300px]"
             >
               <div className="absolute inset-0 bg-gradient-to-tr from-amber-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
               <div className="relative z-10">
@@ -691,7 +692,7 @@ export default function Home() {
               whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="relative group overflow-hidden rounded-[2rem] bg-white border border-slate-200 p-8 sm:p-10 flex flex-col hover:border-sky-200 transition-all shadow-md hover:shadow-xl hover:-translate-y-1 min-h-[300px]"
+              className="relative group overflow-hidden rounded-[2rem] bg-white border border-slate-200 p-6 sm:p-8 md:p-10 flex flex-col hover:border-sky-200 transition-all shadow-md hover:shadow-xl hover:-translate-y-1 min-h-[220px] sm:min-h-[300px]"
             >
               <div className="absolute inset-0 bg-gradient-to-tl from-sky-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
               <div className="relative z-10">
@@ -709,9 +710,9 @@ export default function Home() {
               whileInView={isMobile ? undefined : { opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6 }}
-              className="md:col-span-2 lg:col-span-3 relative group overflow-hidden rounded-[2rem] border border-slate-200 flex flex-col lg:flex-row hover:border-blue-300 transition-all bg-white shadow-xl hover:shadow-2xl min-h-[350px] cursor-pointer"
+              className="md:col-span-2 lg:col-span-3 relative group overflow-hidden rounded-[2rem] border border-slate-200 flex flex-col lg:flex-row hover:border-blue-300 transition-all bg-white shadow-xl hover:shadow-2xl min-h-[280px] sm:min-h-[350px] cursor-pointer"
             >
-              <div className="flex-1 p-8 sm:p-12 flex flex-col justify-center order-2 lg:order-1 relative z-10 bg-white/80 backdrop-blur-md lg:backdrop-blur-none lg:bg-transparent transition-all duration-500">
+              <div className="flex-1 p-6 sm:p-8 md:p-12 flex flex-col justify-center order-2 lg:order-1 relative z-10 bg-white/80 backdrop-blur-md lg:backdrop-blur-none lg:bg-transparent transition-all duration-500">
                 <div className="w-16 h-16 rounded-2xl bg-blue-50 border border-blue-100 flex items-center justify-center mb-8 text-amber-500 shadow-sm group-hover:shadow-md group-hover:bg-blue-600 group-hover:text-white transition-all duration-500">
                   <HardHat size={32} />
                 </div>
@@ -728,7 +729,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="flex-1 relative min-h-[250px] lg:min-h-full order-1 lg:order-2 overflow-hidden">
-                <Image src="/project3.png" alt="Infrastructure" fill className="object-cover opacity-90 group-hover:scale-110 group-hover:opacity-100 transition-all duration-1000 ease-out" />
+                <Image src="/project3.png" alt="Vardaan Builders infrastructure division — Bridges, roads & public utility construction" fill className="object-cover opacity-90 group-hover:scale-110 group-hover:opacity-100 transition-all duration-1000 ease-out" />
                 <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 lg:bg-gradient-to-r lg:from-white lg:via-white/90 lg:to-transparent to-transparent opacity-100 group-hover:opacity-0 transition-opacity duration-700" />
               </div>
             </motion.div>
@@ -854,10 +855,10 @@ export default function Home() {
       </section>
 
       {/* ═ Form / CTA Section ═ */}
-      <section id="contact" className="py-16 sm:py-24 md:py-32 relative bg-white border-t border-slate-200 overflow-hidden">
+      <section id="contact" className="py-12 sm:py-24 md:py-32 relative bg-white border-t border-slate-200 overflow-hidden" aria-label="Contact Vardaan Builders">
         <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-amber-100/50 to-transparent blur-3xl pointer-events-none"></div>
         <div className="container mx-auto px-6 lg:px-12 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-24 items-center">
             <motion.div
               initial={shouldAnimateOnScroll ? "hidden" : "show"}
               animate={shouldAnimateOnScroll ? undefined : "show"}
@@ -869,11 +870,12 @@ export default function Home() {
                 <div className="w-16 h-[2px] bg-amber-500"></div>
                 <span className="text-sm font-bold tracking-[0.2em] text-amber-600 uppercase">Consultation</span>
               </motion.div>
-              <motion.h2 variants={fadeUp} className="font-serif text-3xl sm:text-5xl lg:text-7xl text-blue-950 mb-8 leading-[1.1]">
-                Let&apos;s build <br className="hidden sm:block"/>
+              <motion.h2 variants={fadeUp} className="font-serif text-2xl sm:text-5xl lg:text-7xl text-blue-950 mb-6 sm:mb-8 leading-[1.15]">
+                Let&apos;s build{' '}
+                <br className="hidden sm:block"/>
                 <span className="italic text-slate-400 font-light">something iconic.</span>
               </motion.h2>
-              <motion.p variants={fadeUp} className="text-slate-600 text-base sm:text-xl font-light mb-10 max-w-lg leading-relaxed">
+              <motion.p variants={fadeUp} className="text-slate-600 text-sm sm:text-base md:text-xl font-light mb-8 sm:mb-10 max-w-lg leading-relaxed">
                 Whether a luxury residence or a towering commercial hub, our team of principal engineers and architects are ready to realize your vision.
               </motion.p>
 
@@ -884,7 +886,7 @@ export default function Home() {
                   </div>
                   <div>
                     <h4 className="text-sm font-bold tracking-widest text-slate-400 uppercase mb-1">General Inquiries</h4>
-                    <p className="text-slate-900 text-lg font-medium group-hover:text-blue-900 transition-colors">vardaanbuildersandcontractors@gmail.com</p>
+                    <p className="text-slate-900 text-sm sm:text-base md:text-lg font-medium group-hover:text-blue-900 transition-colors break-all sm:break-normal">vardaanbuildersandcontractors@gmail.com</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-6 group">
@@ -893,7 +895,7 @@ export default function Home() {
                   </div>
                   <div>
                     <h4 className="text-sm font-bold tracking-widest text-slate-400 uppercase mb-1">Direct Line</h4>
-                    <p className="text-slate-900 text-lg font-medium group-hover:text-blue-900 transition-colors">7087099999</p>
+                    <p className="text-slate-900 text-sm sm:text-base md:text-lg font-medium group-hover:text-blue-900 transition-colors">7087099999</p>
                   </div>
                 </div>
               </motion.div>
@@ -906,41 +908,43 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <div className="bg-white p-6 sm:p-12 rounded-[2rem] border border-slate-200 relative overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.05)]">
+              <div className="bg-white p-4 sm:p-8 md:p-12 rounded-2xl sm:rounded-[2rem] border border-slate-200 relative overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.05)]">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-amber-200/40 blur-3xl pointer-events-none"></div>
-                <form onSubmit={handleFormSubmit} className="relative z-10 flex flex-col gap-6 sm:gap-8">
-                  <div className="grid sm:grid-cols-2 gap-6 sm:gap-8">
+                <form onSubmit={handleFormSubmit} className="relative z-10 flex flex-col gap-5 sm:gap-8">
+                  <div className="grid sm:grid-cols-2 gap-5 sm:gap-8">
                     <div className="group">
-                      <label className="block text-xs font-bold tracking-widest text-slate-400 uppercase mb-3 transition-colors group-focus-within:text-blue-600">Name</label>
-                      <input required name="name" type="text" className="w-full bg-transparent border-b-2 border-slate-200 pb-3 text-slate-900 text-lg placeholder:text-slate-300 focus:outline-none focus:border-blue-600 transition-colors rounded-none" placeholder="John Doe" />
+                      <label className="block text-xs font-bold tracking-widest text-slate-400 uppercase mb-2 sm:mb-3 transition-colors group-focus-within:text-blue-600">Name</label>
+                      <input required name="name" type="text" className="w-full bg-transparent border-b-2 border-slate-200 pb-2 sm:pb-3 text-slate-900 text-base sm:text-lg placeholder:text-slate-300 focus:outline-none focus:border-blue-600 transition-colors rounded-none" placeholder="John Doe" />
                     </div>
                     <div className="group">
-                      <label className="block text-xs font-bold tracking-widest text-slate-400 uppercase mb-3 transition-colors group-focus-within:text-blue-600">Email</label>
-                      <input required name="email" type="email" className="w-full bg-transparent border-b-2 border-slate-200 pb-3 text-slate-900 text-lg placeholder:text-slate-300 focus:outline-none focus:border-blue-600 transition-colors rounded-none" placeholder="john@company.com" />
+                      <label className="block text-xs font-bold tracking-widest text-slate-400 uppercase mb-2 sm:mb-3 transition-colors group-focus-within:text-blue-600">Email</label>
+                      <input required name="email" type="email" className="w-full bg-transparent border-b-2 border-slate-200 pb-2 sm:pb-3 text-slate-900 text-base sm:text-lg placeholder:text-slate-300 focus:outline-none focus:border-blue-600 transition-colors rounded-none" placeholder="john@company.com" />
                     </div>
                     <div className="group sm:col-span-2">
-                      <label className="block text-xs font-bold tracking-widest text-slate-400 uppercase mb-3 transition-colors group-focus-within:text-blue-600">Contact Us</label>
-                      <input required name="contactUs" type="text" className="w-full bg-transparent border-b-2 border-slate-200 pb-3 text-slate-900 text-lg placeholder:text-slate-300 focus:outline-none focus:border-blue-600 transition-colors rounded-none" placeholder="Phone / WhatsApp number" />
+                      <label className="block text-xs font-bold tracking-widest text-slate-400 uppercase mb-2 sm:mb-3 transition-colors group-focus-within:text-blue-600">Contact Us</label>
+                      <input required name="contactUs" type="text" className="w-full bg-transparent border-b-2 border-slate-200 pb-2 sm:pb-3 text-slate-900 text-base sm:text-lg placeholder:text-slate-300 focus:outline-none focus:border-blue-600 transition-colors rounded-none" placeholder="Phone / WhatsApp number" />
                     </div>
                   </div>
                   <div className="group">
-                    <label className="block text-xs font-bold tracking-widest text-slate-400 uppercase mb-3 transition-colors group-focus-within:text-blue-600">Project Type</label>
-                    <select required name="projectType" className="w-full bg-transparent border-b-2 border-slate-200 pb-3 text-slate-900 text-lg focus:outline-none focus:border-blue-600 transition-colors appearance-none rounded-none cursor-pointer">
-                      <option value="" disabled className="text-slate-400">Select parameter</option>
+                    <label className="block text-xs font-bold tracking-widest text-slate-400 uppercase mb-2 sm:mb-3 transition-colors group-focus-within:text-blue-600">Project Type</label>
+                    <select required name="projectType" className="w-full bg-transparent border-b-2 border-slate-200 pb-2 sm:pb-3 text-slate-900 text-base sm:text-lg focus:outline-none focus:border-blue-600 transition-colors appearance-none rounded-none cursor-pointer">
+                      <option value="" disabled className="text-slate-400">Select project type</option>
                       <option value="residential">Residential Estate</option>
                       <option value="commercial">Commercial Hub</option>
                       <option value="infrastructure">Infrastructure</option>
+                      <option value="renovation">Renovation</option>
+                      <option value="design-build">Design & Build</option>
                     </select>
                   </div>
                   <div className="group">
-                    <label className="block text-xs font-bold tracking-widest text-slate-400 uppercase mb-3 transition-colors group-focus-within:text-blue-600">Project Details</label>
-                    <textarea required name="details" rows={4} className="w-full bg-transparent border-b-2 border-slate-200 pb-3 text-slate-900 text-lg placeholder:text-slate-300 focus:outline-none focus:border-blue-600 transition-colors resize-none rounded-none" placeholder="Tell us about your vision..."></textarea>
+                    <label className="block text-xs font-bold tracking-widest text-slate-400 uppercase mb-2 sm:mb-3 transition-colors group-focus-within:text-blue-600">Project Details</label>
+                    <textarea required name="details" rows={3} className="w-full bg-transparent border-b-2 border-slate-200 pb-2 sm:pb-3 text-slate-900 text-base sm:text-lg placeholder:text-slate-300 focus:outline-none focus:border-blue-600 transition-colors resize-none rounded-none" placeholder="Tell us about your vision..."></textarea>
                   </div>
                   
                   <button 
                     type="submit" 
                     disabled={formState !== "idle"}
-                    className="mt-4 w-full py-5 bg-blue-950 text-white font-bold text-lg rounded-xl hover:bg-blue-900 disabled:opacity-70 disabled:cursor-not-allowed transition-all duration-300 flex justify-center items-center gap-3 shadow-[0_10px_30px_rgba(23,37,84,0.3)] hover:shadow-[0_10px_40px_rgba(23,37,84,0.5)] transform hover:-translate-y-1"
+                    className="mt-2 sm:mt-4 w-full py-4 sm:py-5 bg-blue-950 text-white font-bold text-base sm:text-lg rounded-xl hover:bg-blue-900 disabled:opacity-70 disabled:cursor-not-allowed transition-all duration-300 flex justify-center items-center gap-3 shadow-[0_10px_30px_rgba(23,37,84,0.3)] hover:shadow-[0_10px_40px_rgba(23,37,84,0.5)] transform hover:-translate-y-1"
                   >
                     {formState === "idle" && "Submit Inquiry"}
                     {formState === "submitting" && <div className="w-6 h-6 border-3 border-white/30 border-t-white rounded-full animate-spin" />}

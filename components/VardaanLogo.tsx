@@ -25,8 +25,9 @@ export default function VardaanLogo({
         </div>
       </div>
       {!compact && (
-        <div className={clsx("font-serif text-2xl font-bold tracking-tight", textColor, textClassName)}>
-          Vardaan.
+        <div className={clsx("font-serif font-bold tracking-tight leading-tight", textColor, textClassName)}>
+          <span className="text-2xl block">Vardaan</span>
+          <span className="text-[10px] tracking-[0.15em] uppercase font-semibold opacity-70 block">Builders & Contractors</span>
         </div>
       )}
     </div>
